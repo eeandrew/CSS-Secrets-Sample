@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>背景盒模型</title>
+</head>
+<body>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+		color:#fff;
+	}
+	body {
+		background: #000;
+	}
+	.common-block {
+		width: 400px;
+		height: 400px;
+		border:20px dashed rgba(106,198,99,0.5);
+		display: inline-block;
+		background: #FFF;
+	}
+	.border-box-bg {
+		background-clip: border-box;
+	}
+	.padding-box-bg {
+		background-clip: padding-box;
+	}
+	span {
+		color:#000;
+	}
+</style>
+
+	<h4>background-clip可以设置背景盒模型</h4>
+	<p>background和模型有两类值</p>
+	<ol>
+		<li>
+			border-box: 背景延生至边框外边缘
+		</li>
+		<li>
+			padding-box: 背景延生至边框内边缘
+		</li>
+	</ol>
+
+	<div class="common-block border-box-bg">
+		<span>设置背景模型为border-box(default值)。此时背景延伸至边框外边缘。</span>
+	</div>
+	<div class="common-block padding-box-bg">
+		<span>设置背景模型为padding-box。此时背景延伸至边框内边缘。</span>
+	</div>
+</body>
+</html>

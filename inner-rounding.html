@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>内圆边框</title>
+</head>
+<body>
+<style type="text/css">
+	* {
+		box-sizing: border-box;
+	}
+	body {
+	}
+	.sample-block {
+		background:#CCC;
+		border-radius: 10px;
+		width:100px;
+		height: 100px;
+		margin:20px;
+		display: inline-block;
+		float: left;
+		text-align: center;
+	}
+	.add-box-shadow {
+		box-shadow: 0 0 0 10px blue;
+	}
+	.add-outline {
+		outline: 10px solid blue;
+	}
+</style>
+	<h5>box-shadow会遵循元素的rounding corner。outline不会。</h5>
+	<div class="sample-block">
+		原型
+	</div>
+
+	<div class="sample-block add-box-shadow">
+		只有box-shadow
+	</div>
+
+	<div class="sample-block add-outline">
+		只有outline
+	</div>
+
+	<div class="sample-block add-outline add-box-shadow">
+		同时有outline和box-shadow
+	</div>
+</body>
+</html>
